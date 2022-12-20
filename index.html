@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!--ส่วนนี้ใช้เปิดใน local-->
+    <link rel="stylesheet" href="page_style.css">
+    <!--ส่วนนี้ใช้เปิดผ่าน github-->
+    <link rel="stylesheet" href="css/page_style.css">
+
+    <script type="text/javascript">
+        function ActivateRight(x){
+            if (x == "Home"){
+            document.getElementById("placeholder1").innerHTML = "This page was created by Chanont Luengprasert using HTML CSS JAVASCRIPT";
+            
+            }
+
+            else if (x == "About"){
+                document.getElementById("placeholder1").innerHTML = 
+                "Name = Chanont Luengprasert <br>"+
+                "Nickname = Joe <br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <section id="left_title">
+        <div id="left_picture">
+            <img src="kitten.jpg">
+        </div>
+
+        <div id="name_display">
+            <p>Chanont Luengprasert</p>
+        </div>
+
+        <div id="ButtonOfTitle">
+            <button onclick="ActivateRight('Home')"> Home </button>
+            <button onclick="ActivateRight('About')"> About </button>
+            <button onclick="ActivateRight('Portfolio')"> Portfolio </button>
+            <button onclick="ActivateRight('Contact')"> Contact </button> 
+        </div>
+    </section>
+
+    <section id="right_title">
+        <div id="ShowContent">
+            <p id="placeholder1"></p>
+        </div>
+    </section>
+
+</body>
+</html>
