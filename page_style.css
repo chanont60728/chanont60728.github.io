@@ -6,6 +6,12 @@ button {
     font-size: 30px;
 }
 
+@keyframes animate_of_food_chosen {
+    0% {color: rgb(0, 0, 0);}
+    50% {color: rgb(255, 47, 1);}
+    100% {color: rgb(0, 0, 0);}
+  }
+
 #heading {
     font-size: 70px;
     text-align: center;

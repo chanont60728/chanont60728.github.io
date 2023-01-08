@@ -18,6 +18,7 @@
             if (a == "one"){
                 let result_one = food_court[Math.floor(Math.random() * food_court.length)];
                 document.getElementById("food_chosen").innerHTML = result_one;
+                document.getElementById("food_chosen").style.animation = "animate_of_food_chosen 3s linear infinite";
             }
             
             else if (a == "three"){
@@ -25,7 +26,8 @@
                 for (let i=0;i<3;i++){
                     chosen_three.push(food_court[Math.floor(Math.random() * food_court.length)]);
                 }
-                document.getElementById("food_chosen").innerHTML = chosen_three;   
+                document.getElementById("food_chosen").innerHTML = chosen_three;
+                document.getElementById("food_chosen").style.animation = "animate_of_food_chosen 3s linear infinite";   
             }
 
             else if (a == "seven"){
@@ -33,7 +35,8 @@
                 for (let i=0;i<7;i++){
                     chosen_seven.push(food_court[Math.floor(Math.random() * food_court.length)]);
                 }
-                document.getElementById("food_chosen").innerHTML = chosen_seven;                
+                document.getElementById("food_chosen").innerHTML = chosen_seven;
+                document.getElementById("food_chosen").style.animation = "animate_of_food_chosen 3s linear infinite";                
             }
         }
 
