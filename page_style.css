@@ -1,3 +1,16 @@
-table , th , td {
-    border:1px solid black;
+body {
+    background: linear-gradient(to right,cyan,rgb(129, 214, 134))
+}
+
+button {
+    font-size: 30px;
+}
+
+#heading {
+    font-size: 70px;
+    text-align: center;
+}
+
+#food_chosen{
+    font-size: 40px;
 }

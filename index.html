@@ -6,17 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>วันนี้กินอะไรดี</title>
     <link rel="stylesheet" href="page_style.css">
+    <script>
+        const food_court = [
+            "Sizzler","17 something","ราเมงข้อสอบ",
+            "ลิ้มก๋วยจั๊บ","โคราคุเอ็น","ฟูจิ","นิตยาไก่ย่าง",
+            "กิ๋ม","ชาบูชิ","โออิชิ","บาบีก้อน","burger king",
+            "KFC","เลข 8","ชาบูตง","pizza hut","pizza com"
+    ]
+        
+        function pressing(a){    
+            if (a == "one"){
+                let result_one = food_court[Math.floor(Math.random() * food_court.length)];
+                document.getElementById("food_chosen").innerHTML = result_one;
+            }
+            
+            else if (a == "three"){
+                var chosen_three = [];
+                for (let i=0;i<3;i++){
+                    chosen_three.push(food_court[Math.floor(Math.random() * food_court.length)]);
+                }
+                document.getElementById("food_chosen").innerHTML = chosen_three;   
+            }
+
+            else if (a == "seven"){
+                chosen_seven = [];
+                for (let i=0;i<7;i++){
+                    chosen_seven.push(food_court[Math.floor(Math.random() * food_court.length)]);
+                }
+                document.getElementById("food_chosen").innerHTML = chosen_seven;                
+            }
+        }
+
+        function clearing(){
+            document.getElementById("food_chosen").innerHTML = " ";
+        }
+    </script>
+
 </head>
 <body>
-    <p> วันนี้กินอะไรดี </p>
-    <table>
-        <tr>
-            <th colspan="3"> ร้านอาหาร </th>
-        </tr>
-        <tr>
-            <td> Sizzler </td>
-            <td> 17 something </td>
-        </tr>
-    </table>
+    <div>
+        <h1 id="heading"> วันนี้กินอะไรดี </h1>
+        <button onclick="pressing('one')">สุ่มร้านอาหาร 1 ร้าน</button>
+        <button onclick="pressing('three')">สุ่มร้านอาหาร 3 ร้าน</button>
+        <button onclick="pressing('seven')">สุ่มร้านอาหาร 7 ร้าน</button>
+        <button onclick="clearing()">เคลียร์ผลลัพธ์</button>
+        <p id="food_chosen"></p>
+    </div>
+
+
 </body>
 </html>
